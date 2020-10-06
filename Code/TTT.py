@@ -1,14 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## Basic Tic-Tac-Toe game
+# Basic Tic-Tac-Toe game
 # 
 # Allows you to use custom tokens and player names and keeps track of scores over multiple rounds
 
-# In[9]:
-
-
-from IPython.display import clear_output
+# clear_output will not work outside of Jupyter Notebook, print a few newlines to clear current view
+# from IPython.display import clear_output
 
 #Set custom markers and default player names
 global_markers = ['X', 'O']
@@ -48,7 +43,8 @@ def player_markers(all_markers):
 
 # The mighty board printer
 def print_board(board):
-    clear_output()
+#     clear_output()
+    print('\n')*100
     print(board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('--|---|--')
     print(board[4] + ' | ' + board[5] + ' | ' + board[6])
@@ -129,7 +125,8 @@ def play_game(pl_names, pl_markers, pl_score, first = True, start_player = 0, st
     
     play_on = input("Would you like to play another game? Press 'Y' to play again or any other key to exit: ")
     if play_on.lower() == 'y':
-        clear_output()
+#         clear_output()
+        print('\n')*100
 #         The logic was if start_player == 0 with if and else blocks reversed by as start_player will only by 1 or 0,
 #         I've simplified the logic
 #         (If you can call having to write multiple lines of comments to explain the logic simplifying the code that is)
@@ -141,11 +138,9 @@ def play_game(pl_names, pl_markers, pl_score, first = True, start_player = 0, st
             start_adjuster = -1
         play_game(names, markers, score, False, start_player, start_adjuster)
     else:
-        clear_output()
+#         clear_output()
+        print('\n')*100
         print("Final Score --- {}:{} - {}:{}".format(pl_names[name_keys[0]],pl_score[name_keys[0]],pl_names[name_keys[1]],pl_score[name_keys[1]]))
-
-
-# In[ ]:
 
 
 # Unused Blocks after refactoring
@@ -161,8 +156,4 @@ def play_game(pl_names, pl_markers, pl_score, first = True, start_player = 0, st
 #     print(example_board[7] + ' | ' + example_board[8] + ' | ' + example_board[9])
 
 
-# In[ ]:
-
-
 play_game(names, markers, score)
-
