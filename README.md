@@ -3,6 +3,6 @@ A basic tic-tac-toe game I created while learning Python
 
 This doesn't use any GUI libraries and uses strings to display the board. The code is really easy and barely 200 lines long so it should be pretty easy to understand.
 
-The code folder has both a Jupyter notebook (.ipynb) and a <b>.py</b> file so that it can be used outside of Jupyter as well. 
+The code folder contains a <b>Jupyter notebook (.ipynb)</b> and a <b>.py</b> file if you are not using Jupyter. 
 
 Feel free to fork this and modify the code at your leisure. If you find any bugs/ineffeciencies with the code/better way of doing things, I'd appreciate if you let me know so that I can leaarn something new!
